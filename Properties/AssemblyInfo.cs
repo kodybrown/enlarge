@@ -14,15 +14,16 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("enlarge ver:0.4.21127.1")]
+[assembly: AssemblyTitle("enlarge ver:0.4.30114.7")]
 [assembly: AssemblyDescription("enlarges the current console window to the maximum size possible.")]
 [assembly: AssemblyCompany("Bricksoft.com")]
 [assembly: AssemblyProduct("enlarge")]
-[assembly: AssemblyCopyright("Copyright (C) 2010-2012 Kody Brown.")]
+[assembly: AssemblyCopyright("Copyright (C) 2010-2013 Kody Brown. Application and source code released under th" +
+    "e MIT License.")]
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(false)]
 [assembly: Guid("951A8D2C-0724-46AE-8DCE-ECF07BF7C1E8")]
-[assembly: AssemblyVersion("0.4.21127.1")]
-[assembly: AssemblyFileVersion("0.4.21127.1")]
+[assembly: AssemblyVersion("0.4.30114.7")]
+[assembly: AssemblyFileVersion("0.4.30114.7")]
 
 

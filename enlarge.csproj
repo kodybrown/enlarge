@@ -77,7 +77,7 @@
   <PropertyGroup>
     <GitBinPath>C:\Tools\Git\bin</GitBinPath>
   </PropertyGroup>
-  <UsingTask TaskName="GitVersion" AssemblyFile="c:\Kody\Root\GitVersion.dll" />
+  <UsingTask TaskName="GitVersion" AssemblyFile="C:\Tools\GitVersion.MSBuild.dll" />
   <Target Name="BeforeBuild">
     <GitVersion GitBinPath="$(GitBinPath)" CurrentPath="$(MSBuildProjectDirectory)">
       <Output TaskParameter="CommitVersion" PropertyName="CommitVersion" />
@@ -87,7 +87,7 @@
       <Output TaskParameter="FormattedTime" PropertyName="BuildDate" />
       <Output TaskParameter="Year" PropertyName="Year" />
     </Time>
-    <AssemblyInfo CodeLanguage="CS" OutputFile="Properties\AssemblyInfo.cs" AssemblyTitle="enlarge ver:$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" AssemblyDescription="enlarges the current console window to the maximum size possible." AssemblyCompany="Bricksoft.com" AssemblyProduct="enlarge" AssemblyCopyright="Copyright (C) 2010-$(Year) Kody Brown." ComVisible="false" CLSCompliant="false" Guid="951A8D2C-0724-46AE-8DCE-ECF07BF7C1E8" AssemblyVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" AssemblyFileVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
+    <AssemblyInfo CodeLanguage="CS" OutputFile="Properties\AssemblyInfo.cs" AssemblyTitle="enlarge ver:$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" AssemblyDescription="enlarges the current console window to the maximum size possible." AssemblyCompany="Bricksoft.com" AssemblyProduct="enlarge" AssemblyCopyright="Copyright (C) 2010-$(Year) Kody Brown. Application and source code released under the MIT License." ComVisible="false" CLSCompliant="false" Guid="951A8D2C-0724-46AE-8DCE-ECF07BF7C1E8" AssemblyVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" AssemblyFileVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
     <Message Text="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
   </Target>
   <Target Name="AfterBuild">
