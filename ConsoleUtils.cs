@@ -27,12 +27,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Bricksoft.PowerCode
-{
-	public static class ConsoleUtils
-	{
-		public static void CenterWindow()
-		{
+namespace Bricksoft.PowerCode {
+	public static class ConsoleUtils {
+		public static string CenterWindow() {
 			IntPtr hWin;
 			RECT rc;
 			Screen scr;
@@ -40,15 +37,30 @@ namespace Bricksoft.PowerCode
 			int y;
 
 			// Center the window on the screen.
-			hWin = GetConsoleWindow();
+			try {
+				hWin = GetConsoleWindow();
+			} catch (Exception ex) {
+				return "Error : GetConsoleWindow()\n\n" + ex.Message;
+			}
 
-			GetWindowRect(hWin, out rc);
+			try {
+				GetWindowRect(hWin, out rc);
+			} catch (Exception ex) {
+				return "Error : GetWindowRect()\n\n" + ex.Message;
+			}
+
 			scr = Screen.FromPoint(new Point(rc.left, rc.top));
 
 			x = scr.WorkingArea.Left + (scr.WorkingArea.Width - (rc.right - rc.left)) / 2;
 			y = scr.WorkingArea.Top + (scr.WorkingArea.Height - (rc.bottom - rc.top)) / 2;
 
-			MoveWindow(hWin, x, y, rc.right - rc.left, rc.bottom - rc.top, false);
+			try {
+				MoveWindow(hWin, x, y, rc.right - rc.left, rc.bottom - rc.top, false);
+			} catch (Exception ex) {
+				return "Error : MoveWindow()\n\n" + ex.Message;
+			}
+
+			return string.Empty;
 		}
 
 		#region P/Invoke declarations
@@ -59,10 +71,10 @@ namespace Bricksoft.PowerCode
 		private static extern IntPtr GetConsoleWindow();
 
 		[DllImport("user32.dll", SetLastError = true)]
-		private static extern bool GetWindowRect( IntPtr hWnd, out RECT rc );
+		private static extern bool GetWindowRect(IntPtr hWnd, out RECT rc);
 
 		[DllImport("user32.dll", SetLastError = true)]
-		private static extern bool MoveWindow( IntPtr hWnd, int x, int y, int w, int h, bool repaint );
+		private static extern bool MoveWindow(IntPtr hWnd, int x, int y, int w, int h, bool repaint);
 
 		#endregion
 	}
