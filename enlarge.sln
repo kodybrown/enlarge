@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shrink", "..\shrink\shrink.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "center", "..\center\center.csproj", "{0ED4BACC-0036-44DF-A3D2-E8866107FF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "move", "..\move\move.csproj", "{2A7B7C62-89FD-4247-A30A-C87B94BAEF16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reloc", "..\reloc\reloc.csproj", "{2A7B7C62-89FD-4247-A30A-C87B94BAEF16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

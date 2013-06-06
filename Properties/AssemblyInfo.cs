@@ -14,7 +14,7 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("enlarge ver:0.4.30415.8")]
+[assembly: AssemblyTitle("enlarge ver:0.4.30605.9")]
 [assembly: AssemblyDescription("enlarges the current console window to the maximum size possible.")]
 [assembly: AssemblyCompany("Bricksoft.com")]
 [assembly: AssemblyProduct("enlarge")]
@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(false)]
 [assembly: Guid("951A8D2C-0724-46AE-8DCE-ECF07BF7C1E8")]
-[assembly: AssemblyVersion("0.4.30415.8")]
-[assembly: AssemblyFileVersion("0.4.30415.8")]
+[assembly: AssemblyVersion("0.4.30605.9")]
+[assembly: AssemblyFileVersion("0.4.30605.9")]
 
 
